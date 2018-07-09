@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="zh-common" />
+        <module name="zh-shiro" />
+        <module name="zh-web" />
+        <module name="zhcc-common" />
+        <module name="zhcc-shiro" />
+        <module name="zhcc-web" />
+        <module name="zhweb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.7" />
+      <module name="zh-common" target="1.7" />
+      <module name="zh-shiro" target="1.7" />
+      <module name="zh-web" target="1.7" />
+      <module name="zhcc" target="1.7" />
+      <module name="zhcc-common" target="1.7" />
+      <module name="zhcc-shiro" target="1.7" />
+      <module name="zhcc-web" target="1.7" />
+      <module name="zhweb" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
