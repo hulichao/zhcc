@@ -7,7 +7,6 @@ import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
 
 /**
  * 校验数字大小
- * @author zcl<yczclcn@163.com>
  */
 public class SizeValidator extends ValidatorHandler<Integer> implements Validator<Integer> {
 

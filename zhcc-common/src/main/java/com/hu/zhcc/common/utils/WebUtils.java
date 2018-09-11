@@ -2,6 +2,8 @@ package com.hu.zhcc.common.utils;
 
 import com.hu.zhcc.common.entity.Query;
 import org.apache.shiro.SecurityUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -64,6 +66,15 @@ public class WebUtils {
 		Map<String, Object> currUser = JSONUtils.jsonToMap(username);
 		Query query = new Query(currUser);
 		return query;
+	}
+
+	/**
+	 * @description 获取HTTP请求
+	 */
+	public static HttpServletRequest getRequest() {
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder
+				.getRequestAttributes()).getRequest();
+		return request;
 	}
 
 }

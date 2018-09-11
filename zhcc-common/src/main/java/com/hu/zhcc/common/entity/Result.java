@@ -50,6 +50,7 @@ public class Result extends HashMap<String, Object> {
     public static Result fail(String msg){
         Result r = new Result();
         r.put("msg", msg);
+        r.put("state", 500);
         return r;
     }
 

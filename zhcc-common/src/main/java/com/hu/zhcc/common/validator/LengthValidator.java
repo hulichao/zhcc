@@ -7,7 +7,6 @@ import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
 
 /**
  * 长度校验
- * @author zcl<yczclcn@163.com>
  */
 public class LengthValidator extends ValidatorHandler<String> implements Validator<String> {
 

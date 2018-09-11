@@ -5,8 +5,8 @@ import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.hu.zhcc.common.entity.Result;
 import com.hu.zhcc.common.utils.CaptchaUtil;
-import com.hu.zhcc.common.utils.MD5Utils;
 import com.hu.zhcc.common.utils.ShiroUtils;
+import com.hu.zhcc.shiro.manager.TokenManager;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
@@ -35,6 +35,9 @@ public class SysLoginController {
 
     @Autowired
     private Producer producer;
+
+    @Autowired
+    private TokenManager tokenManager;
 
     /**
      * 验证码
@@ -112,7 +115,7 @@ public class SysLoginController {
         try {
             Subject subject = ShiroUtils.getSubject();
             //sha256加密
-            password = MD5Utils.encrypt(username, password);
+//            password = MD5Utils.encrypt(username, password);
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);
             subject.login(token);
         } catch (UnknownAccountException e) {
@@ -125,7 +128,8 @@ public class SysLoginController {
             return Result.fail("账户验证失败");
         }
 
-        return Result.success();
+//        return Result.success();
+        return Result.success(tokenManager.createToken(username));
     }
 
     /**

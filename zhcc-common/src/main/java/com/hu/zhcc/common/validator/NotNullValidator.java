@@ -8,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 校验不为null
- * @author zcl<yczclcn@163.com>
  */
 public class NotNullValidator extends ValidatorHandler<String> implements Validator<String> {
 

@@ -1,4 +1,4 @@
-package com.hu.zhcc.common.filters;
+package com.hu.zhcc.shiro.filters;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
@@ -11,6 +11,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * 解决跨域问题的filter
+ * 1.配置filter
+ * 2.xml拦截请求
  * Created by hulichao on 2018/7/7.
  */
 public class CorsFilter implements Filter {

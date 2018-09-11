@@ -2334,7 +2334,7 @@
   
   function getHash () {
     // We can't use window.location.hash here because it's not
-    // consistent across browsers - Firefox will pre-decode it!
+    // consistent across browsers - Firefox will test-decode it!
     var href = window.location.href;
     var index = href.indexOf('#');
     return index === -1 ? '' : href.slice(index + 1)
